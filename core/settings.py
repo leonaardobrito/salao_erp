@@ -5,9 +5,12 @@ Django settings for this project.
 from pathlib import Path
 from decouple import config, Csv
 import os
+import sys
 
 # Build paths
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Security
 SECRET_KEY = config('SECRET_KEY')

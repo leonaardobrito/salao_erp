@@ -211,3 +211,18 @@ mkdir -p infrastructure
 
 touch apps/__init__.py
 
+banco de dados postgres comandos uteis:
+-- Listar todos os usuários
+\du
+
+-- Ver detalhes de um usuário específico
+\du salao_user
+
+-- Alterar senha de um usuário
+ALTER USER salao_user WITH PASSWORD 'nova_senha';
+
+-- Remover usuário (cuidado!)
+DROP USER salao_user;
+
+-- Conceder superusuário (cuidado!)
+ALTER USER salao_user WITH SUPERUSER;

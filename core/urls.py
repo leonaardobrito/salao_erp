@@ -1,5 +1,5 @@
 """
-URL configuration for salao_erp project.
+URL configuration for this project.
 """
 
 from django.contrib import admin
@@ -24,15 +24,15 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     
-    # API Modules (to be implemented)
-    path('api/accounts/', include('apps.accounts.urls')),
-    path('api/customers/', include('apps.customers.urls')),
-    path('api/professionals/', include('apps.professionals.urls')),
-    path('api/services/', include('apps.services.urls')),
-    path('api/scheduling/', include('apps.scheduling.urls')),
-    path('api/financial/', include('apps.financial.urls')),
-    path('api/products/', include('apps.products.urls')),
-    path('api/inventory/', include('apps.inventory.urls')),
+    # API Modules'
+    path('api/accounts/', include('accounts.urls')),
+    path('api/customers/', include('customers.urls')),
+    path('api/professionals/', include('professionals.urls')),
+    path('api/services/', include('services.urls')),
+    path('api/scheduling/', include('scheduling.urls')),
+    path('api/financial/', include('financial.urls')),
+    path('api/products/', include('products.urls')),
+    path('api/inventory/', include('inventory.urls')),
 ]
 
 # Serve media files in development
