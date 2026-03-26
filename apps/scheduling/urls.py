@@ -1,10 +1,10 @@
-from django.urls import path, include
+# apps/scheduling/urls.py
 from rest_framework.routers import DefaultRouter
 from . import views
 
-# Temporário - apenas para evitar erro de importação
-urlpatterns = [
-    # URLs serão implementadas depois
-]
+router = DefaultRouter()
+router.register(r'appointments', views.AppointmentViewSet, basename='appointment')
+
+urlpatterns = router.urls
 
 __all__ = ['urlpatterns']

@@ -4,13 +4,11 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 from .models import User, UserProfile
 
-
 class UserProfileInline(admin.StackedInline):
     """Inline para exibir perfil no admin"""
     model = UserProfile
     can_delete = False
     verbose_name_plural = 'Perfil'
-
 
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
